@@ -2,7 +2,7 @@
 *
 !*/
 !sim/Makefile
-!sim/wave.do
+!sim/*.py
 !src/*.sv
 !test/**
 !testlists/**
