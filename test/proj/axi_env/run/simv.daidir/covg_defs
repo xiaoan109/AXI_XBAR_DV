@@ -1,0 +1,375 @@
+global coverage_group 0 axi_env_tb_mod::axi_env_cov::cg_trans __coverage_axi_env_cov.cg_trans unused_axi_env_cov_cg_trans_loop_label axi_env_tb_mod 0 1 0 0 0  ( 0 
+)
+ 1 2
+ 0 75 /home/eda/workspace/AXI_XBAR_DV/test/proj/axi_env/run/../src/axi_env_cov.sv
+ 75 /home/eda/workspace/AXI_XBAR_DV/test/proj/axi_env/run/../env/ral_axi_env.sv
+ 14 0 0 0 1 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 7 tr.kind 15 0 0 0 0 0 51 axi_env_cov::axi_env_tb_mod_axi_env_cov_cg_trans_fn 51 axi_env_cov::axi_env_tb_mod_axi_env_cov_cg_trans_fn 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 7 32 1 23 axi_env_tb_mod::kinds_e 1 1 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 axi_env_tb_mod::ral_reg_axi_env_CHIP_ID::cg_bits __coverage_ral_reg_axi_env_CHIP_ID.cg_bits unused_ral_reg_axi_env_CHIP_ID_cg_bits_loop_label axi_env_tb_mod 0 1 0 0 0  ( 0 
+)
+ 0 14 1 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_2c
+ 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_2b
+0
+0
+0
+64
+0
+ 0
+
+3
+0
+0
+0
+ 11 REVISION_ID 17 1 0 0 0 0 74 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn 74 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn 0 0 0 0 0 0 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 9 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_12
+ 0
+ 0
+ 0
+ 0
+ 24 1 1 0 1 1 1 13 bit_0_wr_as_0 18 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_0_wr_as_1 19 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_2 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_0_rd 20 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_1_wr_as_0 21 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_4 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_1_wr_as_1 22 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_5 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_1_rd 23 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_2_wr_as_0 24 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_6 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_2_wr_as_1 25 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_7 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_2_rd 26 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_3_wr_as_0 27 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_8 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_3_wr_as_1 28 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_9 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_3_rd 29 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_4_wr_as_0 30 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_a 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_4_wr_as_1 31 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_b 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_4_rd 32 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_5_wr_as_0 33 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_c 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_5_wr_as_1 34 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_d 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_5_rd 35 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_6_wr_as_0 36 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_e 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_6_wr_as_1 37 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_f 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_6_rd 38 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_7_wr_as_0 39 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_10 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_7_wr_as_1 40 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_11 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_7_rd 41 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+
+ 7 CHIP_ID 44 1 0 0 0 0 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_13 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_13 0 0 0 0 0 0 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 9 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_12
+ 0
+ 0
+ 0
+ 0
+ 24 1 1 0 1 1 1 13 bit_0_wr_as_0 45 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_0_wr_as_1 46 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_2 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_0_rd 47 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_1_wr_as_0 48 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_4 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_1_wr_as_1 49 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_5 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_1_rd 50 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_2_wr_as_0 51 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_6 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_2_wr_as_1 52 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_7 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_2_rd 53 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_3_wr_as_0 54 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_8 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_3_wr_as_1 55 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_9 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_3_rd 56 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_4_wr_as_0 57 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_a 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_4_wr_as_1 58 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_b 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_4_rd 59 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_5_wr_as_0 60 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_c 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_5_wr_as_1 61 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_d 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_5_rd 62 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_6_wr_as_0 63 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_e 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_6_wr_as_1 64 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_f 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_6_rd 65 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_7_wr_as_0 66 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_10 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_7_wr_as_1 67 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_11 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_7_rd 68 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_3 0 0 0 0 0 0 0
+ 0
+
+ 10 PRODUCT_ID 71 1 0 0 0 0 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_14 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_14 0 0 0 0 0 0 76 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 11 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_2a
+ 0
+ 0
+ 0
+ 0
+ 30 1 1 0 1 1 1 13 bit_0_wr_as_0 72 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_15 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_0_wr_as_1 73 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_16 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_0_rd 74 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_1_wr_as_0 75 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_18 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_1_wr_as_1 76 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_19 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_1_rd 77 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_2_wr_as_0 78 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1a 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_2_wr_as_1 79 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1b 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_2_rd 80 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_3_wr_as_0 81 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1c 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_3_wr_as_1 82 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1d 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_3_rd 83 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_4_wr_as_0 84 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1e 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_4_wr_as_1 85 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_1f 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_4_rd 86 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_5_wr_as_0 87 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_20 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_5_wr_as_1 88 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_21 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_5_rd 89 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_6_wr_as_0 90 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_22 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_6_wr_as_1 91 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_23 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_6_rd 92 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_7_wr_as_0 93 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_24 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_7_wr_as_1 94 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_25 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_7_rd 95 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_8_wr_as_0 96 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_26 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_8_wr_as_1 97 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_27 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_8_rd 98 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_9_wr_as_0 99 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_28 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 13 bit_9_wr_as_1 100 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_29 0 0 0 0 0 0 0
+ 0
+ 1 1 0 1 1 1 8 bit_9_rd 101 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 77 ral_reg_axi_env_CHIP_ID::axi_env_tb_mod_ral_reg_axi_env_CHIP_ID_cg_bits_fn_17 0 0 0 0 0 0 0
+ 0
+
+end_coverage_group
+global coverage_group 0 axi_env_tb_mod::ral_block_axi_env::cg_addr __coverage_ral_block_axi_env.cg_addr unused_ral_block_axi_env_cg_addr_loop_label axi_env_tb_mod 0 1 0 0 0  ( 0 
+)
+ 0 167 1 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_8
+ 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_7
+0
+0
+0
+64
+0
+ 1
+ 4 name 0 0 0 0
+
+2
+0
+0
+0
+ 7 CHIP_ID 171 1 0 0 0 0 62 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn 62 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 64 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_1
+ 0
+ 0
+ 0
+ 0
+ 1 1 1 0 0 1 1 8 accessed 172 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_0 0 0 0 0 0 0 0
+ 0
+
+ 11 axi_env_RAM 176 1 0 0 0 0 62 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn 62 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 -1 2 64 0 0 1 0 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_6
+ 0
+ 0
+ 0
+ 0
+ 3 1 1 0 0 1 1 23 first_location_accessed 177 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_2 0 0 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 22 last_location_accessed 178 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_3 0 0 0 0 0 0 0
+ 0
+ 1 1 0 0 1 1 24 other_locations_accessed 179 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_4 0 64 ral_block_axi_env::axi_env_tb_mod_ral_block_axi_env_cg_addr_fn_5 0 0 0 0 0
+ 0
+
+end_coverage_group

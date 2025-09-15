@@ -1,0 +1,27 @@
+UVM Version : 2 
+Complete Env.(1) OR Individual Template(2)? : 1 
+Want to create your own methods[Instead of uvm shorthand macros]? : n 
+RAL env? : 1 
+Env. Name : axi_env 
+Agents? : y 
+Name of master agent:  : axi_master 
+Name of sequencer in axi_master master agent:  : master_sequencer 
+Name of driver in axi_master master agent:  : master_driver 
+Name of monitor in axi_master master agent:  : master_monitor 
+Name of interface related to axi_master master agent:  : master_intf 
+Name of transaction in axi_master master agent:  : master_txn 
+BU class for this transaction? : n 
+Name of slave agent:  : axi_slave 
+Name of sequencer in axi_slave slave agent:  : slave_sequencer 
+Name of driver in axi_slave slave agent:  : slave_driver 
+Name of monitor in axi_slave slave agent:  : slave_monitor 
+Name of physical interface related to axi_slave slave agent:  : slave_intf 
+BU class for this transaction? : n 
+Name of transaction related to axi_slave slave agent:  : slave_txn 
+RAL BFM type : 1. RAL sequence adapter, single domain 
+Driver information for the slave agent axi_slave :  :  
+Driver Type : Driver, PULL DRIVER (uvm_driver) 
+Driver information for the master agent axi_master :  :  
+Driver Type : Driver, PULL DRIVER (uvm_driver) 
+Scoreboard? : y 
+Name of Scoreboard Class : axi_scb 
