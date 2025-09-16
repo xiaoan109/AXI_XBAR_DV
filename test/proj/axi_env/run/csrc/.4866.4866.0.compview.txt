@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1757973565.926563827, "rt":3.06, "ut":2.10, "st":0.88}}
-{"vcselab":{"timestamp_begin":1757973569.016570696, "rt":0.28, "ut":0.08, "st":0.13}}
-{"link":{"timestamp_begin":1757973569.317472590, "rt":0.24, "ut":0.09, "st":0.12}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1757973565.782111931}
-{"VCS_COMP_START_TIME": 1757973565.782111931}
-{"VCS_COMP_END_TIME": 1757973569.583589219}
-{"VCS_USER_OPTIONS": "-sverilog -l vcs.log -ntb_opts uvm +incdir+../include+../src+../env+../tests+../hdl ../tests/axi_env_tb_mod.sv ../hdl/axi_env_top.sv"}
-{"vcs1": {"peak_mem": 5159}}
-{"stitch_vcselab": {"peak_mem": 5198}}
