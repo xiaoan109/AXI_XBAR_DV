@@ -3,6 +3,7 @@
 LD_LIBRARY_PATH = ${NOVAS_HOME}/share/PLI/VCS/LINUX
 
 TEST_NAME = axi_base_test
+SEQ = axi_smoke_vseq
 FILELIST = filelist.f
 
 LOG = simv.log
@@ -21,7 +22,7 @@ ifndef TEST_FOLDER
 override TEST_FOLDER = ${TEST_NAME}
 endif
 
-compile_switches = -sverilog -lca -debug_access+all -kdb +vcs+vcdpluson -timescale="1ns/100ps" -l comp.log -ntb_opts ${UVM_VER} -f ${FILELIST} +define+${UVM_DEFINES}+${DEFINES}
+compile_switches = -sverilog -lca -debug_access+all -kdb +vcs+fsdbon -timescale="1ns/100ps" -l comp.log -ntb_opts ${UVM_VER} -f ${FILELIST} +define+${UVM_DEFINES}+${DEFINES}
 runtime_switches = -l ${TEST_FOLDER}/${LOG} +UVM_TESTNAME=${TEST_NAME} +UVM_VERBOSITY=UVM_${VERBO} ${USER_ARGS} +${TRACE} +${OPTION}
 
 ifeq (${RANDSEED}, 1)
@@ -34,7 +35,6 @@ ifdef COV
 	runtime_switches += -cm line+tgl+cond+branch+assert+fsm
 endif
 
-# SEQ = uvm_reg_bit_bash_seq
 
 all: simv run
 
@@ -45,14 +45,14 @@ run:
 ifeq (${wildcard ${TEST_FOLDER}},)
 	mkdir ${TEST_FOLDER}
 endif
-	./simv ${runtime_switches} +seq=${SEQ}
-	cp sim.fsdb ${TEST_FOLDER}/sim.fsdb
+	./simv ${runtime_switches} +UVM_TEST_SEQ=${SEQ}
+	cp novas.fsdb ${TEST_FOLDER}/sim.fsdb
 ifdef COV
 	cp -r simv.vdb ${TEST_FOLDER}/simv.vdb
 endif
 
 random: simv
-	./simv ${runtime_switches} +seq=${SEQ}
+	./simv ${runtime_switches} +UVM_TEST_SEQ=${SEQ}
 
 regression:
 	python regression_handling.py ${TEST_LIST_NAME}
@@ -96,4 +96,4 @@ clean:
 	rm -rf csrc *.vdb *.vcd *.fsdb *.vpd \
 	simv simv.daidir ucli.key vc_hdrs.h *.log \
 	urgReport verdiLog novas.* vdCovLog \
-	*_test* merged
+	*_test* merged verdi_config_file

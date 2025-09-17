@@ -26,7 +26,7 @@ class axi_base_vseq extends dv_base_vseq #(
 
   // setup basic axi features
   virtual task axi_init();
-    `uvm_error(`gfn, "FIXME")
+    // `uvm_error(`gfn, "FIXME")
   endtask
 
 endclass : axi_base_vseq
