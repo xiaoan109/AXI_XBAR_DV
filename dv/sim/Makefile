@@ -23,6 +23,7 @@ override TEST_FOLDER = ${TEST_NAME}
 endif
 
 compile_switches = -sverilog -lca -debug_access+all -kdb +vcs+fsdbon -timescale="1ns/100ps" -l comp.log -ntb_opts ${UVM_VER} -f ${FILELIST} +define+${UVM_DEFINES}+${DEFINES}
+compile_switches += +warn=noUII-L,noTMR
 runtime_switches = -l ${TEST_FOLDER}/${LOG} +UVM_TESTNAME=${TEST_NAME} +UVM_VERBOSITY=UVM_${VERBO} ${USER_ARGS} +${TRACE} +${OPTION}
 
 ifeq (${RANDSEED}, 1)

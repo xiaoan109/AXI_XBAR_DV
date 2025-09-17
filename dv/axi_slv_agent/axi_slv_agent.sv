@@ -17,7 +17,7 @@ class axi_slv_agent extends dv_base_agent #(
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     // get axi_slv_if handle
-    if (!uvm_config_db#(virtual axi_slv_if)::get(this, "", "vif", cfg.vif)) begin
+    if (!uvm_config_db#(axi_slv_vif)::get(this, "", "vif", cfg.vif)) begin
       `uvm_fatal(`gfn, "failed to get axi_slv_if handle from uvm_config_db")
     end
   endfunction

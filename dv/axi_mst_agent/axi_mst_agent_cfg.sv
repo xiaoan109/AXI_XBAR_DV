@@ -5,7 +5,7 @@
 class axi_mst_agent_cfg extends dv_base_agent_cfg;
 
   // interface handle used by driver, monitor & the sequencer, via cfg handle
-  virtual axi_mst_if vif;
+  axi_mst_vif vif;
 
   `uvm_object_utils_begin(axi_mst_agent_cfg)
   `uvm_object_utils_end

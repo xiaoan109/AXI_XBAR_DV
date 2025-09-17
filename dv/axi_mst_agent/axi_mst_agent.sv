@@ -17,7 +17,7 @@ class axi_mst_agent extends dv_base_agent #(
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     // get axi_mst_if handle
-    if (!uvm_config_db#(virtual axi_mst_if)::get(this, "", "vif", cfg.vif)) begin
+    if (!uvm_config_db#(axi_mst_vif)::get(this, "", "vif", cfg.vif)) begin
       `uvm_fatal(`gfn, "failed to get axi_mst_if handle from uvm_config_db")
     end
   endfunction

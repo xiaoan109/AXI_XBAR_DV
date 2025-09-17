@@ -1,3 +1,5 @@
+-f dut_filelist.f
+
 +incdir+$HOME/tools/opentitan/hw/dv/sv/dv_utils
 +incdir+$HOME/tools/opentitan/hw/dv/sv/dv_lib
 +incdir+$HOME/tools/opentitan/hw/dv/sv/csr_utils
@@ -6,10 +8,11 @@
 // opentitan dv pkgs
 $HOME/tools/opentitan/hw/top_earlgrey/rtl/top_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/bus_params_pkg/bus_params_pkg.sv
+$HOME/tools/opentitan/hw/ip/prim/rtl/prim_mubi_pkg.sv
+$HOME/tools/opentitan/hw/ip/prim/rtl/prim_util_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/str_utils/str_utils_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/dv_utils/dv_test_status_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/dv_utils/dv_utils_pkg.sv
-$HOME/tools/opentitan/hw/ip/prim/rtl/prim_mubi_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/dv_base_reg/dv_base_reg_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/csr_utils/csr_utils_pkg.sv
 $HOME/tools/opentitan/hw/dv/sv/dv_lib/dv_lib_pkg.sv
@@ -35,4 +38,6 @@ $HOME/workspace/AXI_XBAR_DV/dv/axi_mst_agent/axi_mst_if.sv
 $HOME/workspace/AXI_XBAR_DV/dv/axi_slv_agent/axi_slv_if.sv
 $HOME/workspace/AXI_XBAR_DV/dv/sva/axi_bind.sv
 $HOME/workspace/AXI_XBAR_DV/dv/tb.sv
+
+-top tb
 

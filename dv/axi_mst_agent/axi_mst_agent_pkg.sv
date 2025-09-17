@@ -13,6 +13,10 @@ package axi_mst_agent_pkg;
   `include "dv_macros.svh"
 
   // parameters
+  parameter int unsigned AXI_ADDR_WIDTH = 32'd32;
+  parameter int unsigned AXI_DATA_WIDTH = 32'd32;
+  parameter int unsigned AXI_ID_WIDTH = 32'd8;
+  parameter int unsigned AXI_USER_WIDTH = 32'd1;
 
   // local types
   // forward declare classes to allow typedefs below
@@ -22,6 +26,9 @@ package axi_mst_agent_pkg;
   // reuse dv_base_sequencer as is with the right parameter set
   typedef dv_base_sequencer #(.ITEM_T(axi_mst_item),
                               .CFG_T (axi_mst_agent_cfg)) axi_mst_sequencer;
+
+  // virtual intf
+  typedef virtual axi_mst_if#(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH, AXI_USER_WIDTH) axi_mst_vif;
 
   // functions
 
