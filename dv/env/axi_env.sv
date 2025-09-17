@@ -12,7 +12,6 @@ class axi_env extends dv_base_env #(
 
   axi_mst_agent m_axi_mst_agent;
   axi_slv_agent m_axi_slv_agent;
-  clk_rst_agent m_clk_rst_agent;
 
   `uvm_component_new
 
@@ -26,10 +25,6 @@ class axi_env extends dv_base_env #(
     m_axi_slv_agent = axi_slv_agent::type_id::create("m_axi_slv_agent", this);
     uvm_config_db#(axi_slv_agent_cfg)::set(this, "m_axi_slv_agent*", "cfg", cfg.m_axi_slv_agent_cfg);
     cfg.m_axi_slv_agent_cfg.en_cov = cfg.en_cov;
-    // create components
-    m_clk_rst_agent = clk_rst_agent::type_id::create("m_clk_rst_agent", this);
-    uvm_config_db#(clk_rst_agent_cfg)::set(this, "m_clk_rst_agent*", "cfg", cfg.m_clk_rst_agent_cfg);
-    cfg.m_clk_rst_agent_cfg.en_cov = cfg.en_cov;
   endfunction
 
   function void connect_phase(uvm_phase phase);
@@ -37,16 +32,12 @@ class axi_env extends dv_base_env #(
     if (cfg.en_scb) begin
       m_axi_mst_agent.monitor.analysis_port.connect(scoreboard.axi_mst_fifo.analysis_export);
       m_axi_slv_agent.monitor.analysis_port.connect(scoreboard.axi_slv_fifo.analysis_export);
-      m_clk_rst_agent.monitor.analysis_port.connect(scoreboard.clk_rst_fifo.analysis_export);
     end
     if (cfg.is_active && cfg.m_axi_mst_agent_cfg.is_active) begin
       virtual_sequencer.axi_mst_sequencer_h = m_axi_mst_agent.sequencer;
     end
     if (cfg.is_active && cfg.m_axi_slv_agent_cfg.is_active) begin
       virtual_sequencer.axi_slv_sequencer_h = m_axi_slv_agent.sequencer;
-    end
-    if (cfg.is_active && cfg.m_clk_rst_agent_cfg.is_active) begin
-      virtual_sequencer.clk_rst_sequencer_h = m_clk_rst_agent.sequencer;
     end
   endfunction
 

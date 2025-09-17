@@ -9,8 +9,8 @@ package axi_env_pkg;
   import dv_utils_pkg::*;
   import axi_mst_agent_pkg::*;
   import axi_slv_agent_pkg::*;
-  import clk_rst_agent_pkg::*;
   import dv_lib_pkg::*;
+  import dv_base_reg_pkg::*;
 
   // macro includes
   `include "uvm_macros.svh"

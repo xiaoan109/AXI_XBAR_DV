@@ -10,7 +10,6 @@ filesets:
       - lowrisc:dv:dv_lib
       - lowrisc:dv:axi_mst_agent
       - lowrisc:dv:axi_slv_agent
-      - lowrisc:dv:clk_rst_agent
     files:
       - axi_env_pkg.sv
       - axi_env_cfg.sv: {is_include_file: true}

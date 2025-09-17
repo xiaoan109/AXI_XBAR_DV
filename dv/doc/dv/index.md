@@ -62,9 +62,6 @@ All common types and methods defined at the package level can be found in
 ###  AXI_SLV Agent
 [Describe here or add link to its README]
 
-###  CLK_RST Agent
-[Describe here or add link to its README]
-
 ### UVC/agent 1
 [Describe here or add link to its README]
 

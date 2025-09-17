@@ -16,7 +16,7 @@ class axi_base_test extends dv_base_test #(
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    cfg.has_ral = 1'b0;
+    // cfg.has_ral = 1'b0;
   endfunction
   // the base class also looks up UVM_TEST_SEQ plusarg to create and run that seq in
   // the run_phase; as such, nothing more needs to be done

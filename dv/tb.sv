@@ -19,14 +19,13 @@ module tb;
   clk_rst_if clk_rst_if(.clk(clk), .rst_n(rst_n));
   axi_mst_if axi_mst_if();
   axi_slv_if axi_slv_if();
-  clk_rst_if clk_rst_if();
 
 
   // dut
-  axi dut (
-    .clk_i                (clk      ),
-    // TODO: add remaining IOs and hook them
-  );
+  // axi dut (
+  //   .clk_i                (clk      ),
+  //   // TODO: add remaining IOs and hook them
+  // );
 
   initial begin
     // drive clk and rst_n from clk_if
@@ -34,7 +33,6 @@ module tb;
     uvm_config_db#(virtual clk_rst_if)::set(null, "*.env", "clk_rst_vif", clk_rst_if);
     uvm_config_db#(virtual axi_mst_if)::set(null, "*.env.m_axi_mst_agent*", "vif", axi_mst_if);
     uvm_config_db#(virtual axi_slv_if)::set(null, "*.env.m_axi_slv_agent*", "vif", axi_slv_if);
-    uvm_config_db#(virtual clk_rst_if)::set(null, "*.env.m_clk_rst_agent*", "vif", clk_rst_if);
     $timeformat(-12, 0, " ps", 12);
     run_test();
   end
