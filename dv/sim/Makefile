@@ -5,7 +5,7 @@ LD_LIBRARY_PATH = ${NOVAS_HOME}/share/PLI/VCS/LINUX
 TEST_NAME = axi_base_test
 SEQ = axi_smoke_vseq
 FILELIST = filelist.f
-
+TCL_FILE = dump_fsdb_vcs.tcl
 LOG = simv.log
 VERBO = MEDIUM
 UVM_VER = uvm-1.2
@@ -15,6 +15,7 @@ DEFINES = UVM
 UVM_DEFINES = UVM_NO_DEPRECATED+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR
 USER_ARGS = 
 OPTIONS = UVM_TR_RECORD + UVM_LOG_RECORD
+TRACE = UVM_VERDI_TRACE="UVM_AWARE+HIER"
 # TRACE = UVM_CONFIG_DB_TRACE
 # TRACE = UVM_OBJECTION_TRACE
 TEST_LIST_NAME = testlist.f
@@ -22,9 +23,10 @@ ifndef TEST_FOLDER
 override TEST_FOLDER = ${TEST_NAME}
 endif
 
-compile_switches = -sverilog -lca -debug_access+all -kdb +vcs+fsdbon -timescale="1ns/100ps" -l comp.log -ntb_opts ${UVM_VER} -f ${FILELIST} +define+${UVM_DEFINES}+${DEFINES}
-compile_switches += +warn=noUII-L,noTMR
+compile_switches = -sverilog -lca -debug_access+all -kdb -timescale="1ns/100ps" -l comp.log -ntb_opts ${UVM_VER} -f ${FILELIST} +define+${UVM_DEFINES}+${DEFINES}
+# compile_switches += +warn=noUII-L,noTMR
 runtime_switches = -l ${TEST_FOLDER}/${LOG} +UVM_TESTNAME=${TEST_NAME} +UVM_VERBOSITY=UVM_${VERBO} ${USER_ARGS} +${TRACE} +${OPTION}
+runtime_switches += -ucli -i ${TCL_FILE}
 
 ifeq (${RANDSEED}, 1)
 	runtime_switches += +ntb_random_seed_automatic
@@ -39,7 +41,7 @@ endif
 
 all: simv run
 
-simv compile:
+simv comp:
 	vcs ${compile_switches}
 
 run:
@@ -47,9 +49,10 @@ ifeq (${wildcard ${TEST_FOLDER}},)
 	mkdir ${TEST_FOLDER}
 endif
 	./simv ${runtime_switches} +UVM_TEST_SEQ=${SEQ}
-	cp novas.fsdb ${TEST_FOLDER}/sim.fsdb
+	cp test.fsdb ${TEST_FOLDER}/sim.fsdb
+	cp -r simv.daidir ${TEST_FOLDER}/
 ifdef COV
-	cp -r simv.vdb ${TEST_FOLDER}/simv.vdb
+	cp -r simv.vdb ${TEST_FOLDER}/
 endif
 
 random: simv
@@ -78,7 +81,7 @@ cover:
 # 	./simv -gui=dve +ntb_random_seed=$(seed) ${runtime_switches} +seq=${seq} &
 # 
 verdi:
-	verdi -ssf ${TEST_FOLDER}/sim.fsdb &
+	verdi -ssf ${TEST_FOLDER}/sim.fsdb -dbdir ${TEST_FOLDER}/simv.daidir &
 # 
 # verdi_tr:
 # 	./simv +ntb_random_seed=$(seed) ${runtime_switches} +UVM_VERDI_TRACE
@@ -96,5 +99,5 @@ verdi_merged:
 clean:
 	rm -rf csrc *.vdb *.vcd *.fsdb *.vpd \
 	simv simv.daidir ucli.key vc_hdrs.h *.log \
-	urgReport verdiLog novas.* vdCovLog \
+	urgReport verdiLog vdCovLog \
 	*_test* merged verdi_config_file

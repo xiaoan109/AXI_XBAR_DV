@@ -7,18 +7,13 @@ package axi_slv_agent_pkg;
   import uvm_pkg::*;
   import dv_utils_pkg::*;
   import dv_lib_pkg::*;
+  import axi_xbar_dv_pkg::*;
 
   // macro includes
   `include "uvm_macros.svh"
   `include "dv_macros.svh"
 
   // parameters
-  parameter int unsigned NUM_MASTERS = 32'd1;
-  parameter int unsigned AXI_ADDR_WIDTH = 32'd32;
-  parameter int unsigned AXI_DATA_WIDTH = 32'd32;
-  parameter int unsigned AXI_ID_WIDTH = 32'd8;
-  parameter int unsigned AXI_USER_WIDTH = 32'd1;
-
 
   // local types
   // forward declare classes to allow typedefs below

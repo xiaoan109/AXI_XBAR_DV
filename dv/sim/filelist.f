@@ -30,6 +30,7 @@ $HOME/tools/opentitan/hw/dv/sv/common_ifs/clk_rst_if.sv
 +incdir+$HOME/workspace/AXI_XBAR_DV/dv/env/seq_lib
 +incdir+$HOME/workspace/AXI_XBAR_DV/dv/tests
 // axi xbar dv pkgs
+$HOME/workspace/AXI_XBAR_DV/dv/common/axi_xbar_dv_pkg.sv
 $HOME/workspace/AXI_XBAR_DV/dv/axi_mst_agent/axi_mst_agent_pkg.sv
 $HOME/workspace/AXI_XBAR_DV/dv/axi_slv_agent/axi_slv_agent_pkg.sv
 $HOME/workspace/AXI_XBAR_DV/dv/env/axi_env_pkg.sv

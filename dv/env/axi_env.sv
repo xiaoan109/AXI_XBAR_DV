@@ -25,6 +25,8 @@ class axi_env extends dv_base_env #(
     m_axi_slv_agent = axi_slv_agent::type_id::create("m_axi_slv_agent", this);
     uvm_config_db#(axi_slv_agent_cfg)::set(this, "m_axi_slv_agent*", "cfg", cfg.m_axi_slv_agent_cfg);
     cfg.m_axi_slv_agent_cfg.en_cov = cfg.en_cov;
+    // currently the axi slave item is the same as the axi master item
+    set_type_override_by_type(axi_slv_item::get_type(), axi_mst_item::get_type());
   endfunction
 
   function void connect_phase(uvm_phase phase);

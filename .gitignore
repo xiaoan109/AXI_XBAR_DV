@@ -2,7 +2,5 @@
 *
 !*/
 !sim/Makefile
-!sim/*.py
-!src/*.sv
-!test/**
-!testlists/**
+!*.py
+!*.sv
