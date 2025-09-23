@@ -5,7 +5,12 @@
 class axi_mst_agent_cfg extends dv_base_agent_cfg;
 
   // interface handle used by driver, monitor & the sequencer, via cfg handle
-  axi_mst_vif vif;
+  axi_mst_vif  vif;
+  int unsigned b_ready_delay_min;
+  int unsigned b_ready_delay_max;
+  int unsigned r_ready_delay_min;
+  int unsigned r_ready_delay_max;
+  memory_partitions_cfg m_memory_partitions;
 
   `uvm_object_utils_begin(axi_mst_agent_cfg)
   `uvm_object_utils_end

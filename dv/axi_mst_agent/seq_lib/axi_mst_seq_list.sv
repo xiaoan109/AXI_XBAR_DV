@@ -3,3 +3,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `include "axi_mst_base_seq.sv"
+`include "axi_mst_random_seq.sv"
+`include "axi_mst_write_seq.sv"
+`include "axi_mst_read_seq.sv"

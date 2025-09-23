@@ -11,6 +11,8 @@ package axi_env_pkg;
   import axi_slv_agent_pkg::*;
   import dv_lib_pkg::*;
   import dv_base_reg_pkg::*;
+  import axi_xbar_dv_pkg::*;
+  import memory_partitions_pkg::*;
 
   // macro includes
   `include "uvm_macros.svh"

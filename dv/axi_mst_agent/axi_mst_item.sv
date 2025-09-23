@@ -66,6 +66,7 @@ class axi_mst_item extends uvm_sequence_item;
     `uvm_field_int(m_atop, UVM_DEFAULT | UVM_HEX)
     `uvm_field_queue_enum(axi_dv_resp_t, m_resp, UVM_DEFAULT)
     `uvm_field_enum(axi_dv_txn_type_t, m_txn_type, UVM_DEFAULT)
+    `uvm_field_enum(axi_dv_err_t, m_err, UVM_DEFAULT)
     `uvm_field_enum(axi_dv_mem_type_t, m_mem_type, UVM_DEFAULT)
     `uvm_field_int(m_delay_cycle_chan_X, UVM_DEFAULT | UVM_NOCOMPARE)
     `uvm_field_int(m_delay_cycle_chan_W, UVM_DEFAULT | UVM_NOCOMPARE)
@@ -90,6 +91,15 @@ class axi_mst_item extends uvm_sequence_item;
       m_last[i] == 0;
       else
       m_last[i] == 1;
+    }
+  }
+
+  // delay cycle
+  constraint c_delay_cycle_X {m_delay_cycle_chan_X inside {[0 : 10]};}
+  constraint c_delay_cycle_W {m_delay_cycle_chan_W inside {[0 : 10]};}
+  constraint c_delay_cycle_flits {
+    foreach (m_delay_cycle_flits[i]) {
+      m_delay_cycle_flits[i] inside {[0 : 5]};
     }
   }
 
@@ -188,7 +198,7 @@ class axi_mst_item extends uvm_sequence_item;
     int lower_byte_lane, upper_byte_lane;
     axi_sig_addr_t aligned_addr, address_n;
     axi_sig_addr_t lower_wrap_boundary, upper_wrap_boundary;
-    int container_size;
+    int   container_size;
     logic wrap_en;
 
     super.post_randomize();
@@ -433,6 +443,225 @@ class axi_mst_item extends uvm_sequence_item;
     end
   endfunction : append_read_flit
 
+
+  // ------------------------------------------------------------------------
+  // set/get functions
+  // ------------------------------------------------------------------------
+  // ID
+  function axi_sig_id_t get_id();
+    get_id = m_id;
+  endfunction : get_id
+
+  function void set_id(axi_sig_id_t id_i);
+    m_id = id_i;
+  endfunction : set_id
+
+  // ADDR
+  function axi_sig_addr_t get_addr();
+    get_addr = m_addr;
+  endfunction : get_addr
+
+  function void set_addr(axi_sig_addr_t addr_i);
+    m_addr = addr_i;
+  endfunction : set_addr
+
+  // ALL DATA FLITS
+  function void get_all_data_flits(ref axi_sig_data_t data_o[$]);
+    foreach (m_data[i]) data_o[i] = m_data[i];
+  endfunction : get_all_data_flits
+
+  function void set_all_data_flits(axi_sig_data_t data_i[$]);
+    foreach (data_i[i]) m_data[i] = data_i[i];
+  endfunction : set_all_data_flits
+
+  // DATA FLIT
+  function void get_data_flit(ref axi_sig_data_t data_o, int index);
+    if (index < m_data.size()) data_o = m_data[index];
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_data.size()))
+  endfunction : get_data_flit
+
+  function void set_data_flit(axi_sig_data_t data_i, int index);
+    if (index < m_data.size()) m_data[index] = data_i;
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_data.size()))
+  endfunction : set_data_flit
+
+  // ALL WSTRB FLITS
+  function void get_all_wstrb_flits(ref axi_sig_wstrb_t wstrb_o);
+    foreach (m_wstrb[i]) wstrb_o[i] = m_wstrb[i];
+  endfunction : get_all_wstrb_flits
+
+  function void set_all_wstrb_flits(axi_sig_wstrb_t wstrb_i[]);
+    foreach (wstrb_i[i]) m_wstrb[i] = wstrb_i[i];
+  endfunction : set_all_wstrb_flits
+
+  // WSTRB FLIT
+  function void get_wstrb_flit(ref axi_sig_wstrb_t wstrb_o, int index);
+    if (index < m_wstrb.size()) wstrb_o = m_wstrb[index];
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_wstrb.size()))
+  endfunction : get_wstrb_flit
+
+  function void set_wstrb_flit(axi_sig_wstrb_t wstrb_i, int index);
+    if (index < m_wstrb.size()) m_wstrb[index] = wstrb_i;
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_wstrb.size()))
+  endfunction : set_wstrb_flit
+
+  // ALL LAST FLITS
+  function void get_all_last_flits(ref logic last_o[]);
+    foreach (m_last[i]) last_o[i] = m_last[i];
+  endfunction : get_all_last_flits
+
+  function void set_all_last_flits(logic [0:0] last_i[]);
+    foreach (last_i[i]) m_last[i] = last_i[i];
+  endfunction : set_all_last_flits
+
+  // LAST FLIT
+  function void get_last_flit(ref logic last_o, int index);
+    if (index < m_last.size()) last_o = m_last[index];
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_last.size()))
+  endfunction : get_last_flit
+
+  function void set_last_flit(logic last_i, int index);
+    if (index < m_last.size()) m_last[index] = last_i;
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_last.size()))
+  endfunction : set_last_flit
+
+  // LEN
+  function logic [7:0] get_len();
+    get_len = m_len;
+  endfunction : get_len
+
+  function void set_len(logic [7:0] len_i);
+    m_len = len_i;
+  endfunction : set_len
+
+  // SIZE
+  function axi_dv_size_t get_size();
+    get_size = m_size;
+  endfunction : get_size
+
+  function void set_size(axi_dv_size_t size_i);
+    m_size = size_i;
+  endfunction : set_size
+
+  // BURST
+  function axi_dv_burst_t get_burst();
+    get_burst = m_burst;
+  endfunction : get_burst
+
+  function void set_burst(axi_dv_burst_t burst_i);
+    m_burst = burst_i;
+  endfunction : set_burst
+
+  // LOCK
+  function axi_dv_lock_t get_lock();
+    get_lock = m_lock;
+  endfunction : get_lock
+
+  function void set_lock(axi_dv_lock_t lock_i);
+    m_lock = lock_i;
+  endfunction : set_lock
+
+  // CACHE
+  function axi_sig_cache_t get_cache();
+    get_cache = m_cache;
+  endfunction : get_cache
+
+  function void set_cache(axi_sig_cache_t cache_i);
+    m_cache = cache_i;
+  endfunction : set_cache
+
+  // PROT
+  function axi_dv_prot_t get_prot();
+    get_prot = m_prot;
+  endfunction : get_prot
+
+  function void set_prot(axi_dv_prot_t prot_i);
+    m_prot = prot_i;
+  endfunction : set_prot
+
+  // QOS
+  function logic [3:0] get_qos();
+    get_qos = m_qos;
+  endfunction : get_qos
+
+  function void set_qos(logic [3:0] qos_i);
+    m_qos = qos_i;
+  endfunction : set_qos
+
+  // REGION
+  function logic [3:0] get_region();
+    get_region = m_region;
+  endfunction : get_region
+
+  function void set_region(logic [3:0] region_i);
+    m_region = region_i;
+  endfunction : set_region
+
+  // USER
+  function axi_sig_user_t get_user();
+    get_user = m_user;
+  endfunction : get_user
+
+  function void set_user(axi_sig_user_t user_i);
+    m_user = user_i;
+  endfunction : set_user
+
+  // ALL RESP FLITS
+  function void get_all_resp_flits(ref axi_dv_resp_t resp_o[]);
+    foreach (m_resp[i]) resp_o[i] = m_resp[i];
+  endfunction : get_all_resp_flits
+
+  function void set_all_resp_flits(axi_dv_resp_t resp_i[]);
+    foreach (resp_i[i]) m_resp[i] = resp_i[i];
+  endfunction : set_all_resp_flits
+
+  // RESP FLIT
+  function void get_resp_flit(ref axi_dv_resp_t resp_o, int index);
+    if (index < m_resp.size()) resp_o = m_resp[index];
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_resp.size()))
+  endfunction : get_resp_flit
+
+  function void set_resp_flit(axi_dv_resp_t resp_i, int index);
+    if (index < m_resp.size()) m_resp[index] = resp_i;
+    else `uvm_warning(`gfn, $sformatf("The index %0d is out of bound of the dynamic array of size %0d", index, m_resp.size()))
+  endfunction : set_resp_flit
+
+  // ATOP
+  function logic [5:0] get_atop();
+    get_atop = m_atop;
+  endfunction : get_atop
+
+  function void set_atop(logic [5:0] atop_i);
+    m_atop = atop_i;
+  endfunction : set_atop
+
+
+  // AX DELAY
+  function int get_delay_AX();
+    get_delay_AX = m_delay_cycle_chan_X;
+  endfunction : get_delay_AX
+
+  function void set_delay_AX(int delay_AX_i);
+    m_delay_cycle_chan_X = delay_AX_i;
+  endfunction : set_delay_AX
+
+  // W DELAY
+  function int get_delay_W();
+    get_delay_W = m_delay_cycle_chan_W;
+  endfunction : get_delay_W
+
+  function void set_delay_W(int delay_W_i);
+    m_delay_cycle_chan_W = delay_W_i;
+  endfunction : set_delay_W
+
+  // FLITS DELAY
+  function void get_delay_flits(ref int delay_flits_o);
+    foreach (m_delay_cycle_flits[i]) delay_flits_o[i] = m_delay_cycle_flits[i];
+  endfunction : get_delay_flits
+
+  function void set_delay_flits(int delay_flits_i[]);
+    foreach (delay_flits_i[i]) m_delay_cycle_flits[i] = delay_flits_i[i];
+  endfunction : set_delay_flits
 
 
 endclass

@@ -8,13 +8,13 @@ package axi_mst_agent_pkg;
   import dv_utils_pkg::*;
   import dv_lib_pkg::*;
   import axi_xbar_dv_pkg::*;
+  import memory_partitions_pkg::*;
 
   // macro includes
   `include "uvm_macros.svh"
   `include "dv_macros.svh"
 
   // parameters
-  parameter int unsigned AXI_ADDR_WIDTH = 32'd32;
 
   // local types
   // forward declare classes to allow typedefs below

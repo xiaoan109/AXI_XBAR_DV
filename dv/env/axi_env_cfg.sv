@@ -5,11 +5,17 @@
 class axi_env_cfg extends dv_base_env_cfg;
 
   // ext component cfgs
-  rand axi_mst_agent_cfg m_axi_mst_agent_cfg;
-  rand axi_slv_agent_cfg m_axi_slv_agent_cfg;
+  rand axi_mst_agent_cfg                  m_axi_mst_agent_cfg;
+  rand axi_slv_agent_cfg                  m_axi_slv_agent_cfg;
 
   // RAL indicator
-  bit has_ral;
+  bit                                     has_ral;
+
+  // ----------------------------------------------
+  // Memory partition 
+  // Divides the memory in small partitions 
+  // ----------------------------------------------
+  memory_partitions_cfg #(AXI_ADDR_WIDTH) m_memory_partitions;
 
   `uvm_object_utils_begin(axi_env_cfg)
     `uvm_field_object(m_axi_mst_agent_cfg, UVM_DEFAULT)

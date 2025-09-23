@@ -7,6 +7,8 @@ package axi_test_pkg;
   import uvm_pkg::*;
   import dv_lib_pkg::*;
   import axi_env_pkg::*;
+  import axi_xbar_dv_pkg::*;
+  import memory_partitions_pkg::*;
 
   // macro includes
   `include "uvm_macros.svh"

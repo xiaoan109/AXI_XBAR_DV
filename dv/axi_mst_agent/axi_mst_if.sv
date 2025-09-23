@@ -8,7 +8,8 @@ interface axi_mst_if #(
   parameter int unsigned AXI_ID_WIDTH   = 0,
   parameter int unsigned AXI_USER_WIDTH = 0
 )(
-  input logic clk_i
+  input logic clk_i,
+  input logic rst_ni
 );
 
   localparam int unsigned AXI_STRB_WIDTH = AXI_DATA_WIDTH / 8;
@@ -135,5 +136,12 @@ interface axi_mst_if #(
   )) else $error("AR burst crossing 4 KiB page boundary detected, which is illegal!");
   `endif
   // pragma translate_on
+
+  // task to wait a specific number of clock cycle
+  task automatic wait_n_clock_cycle( int unsigned n_clock_cycle );
+    for (int i = 0 ; i < n_clock_cycle ; i++) begin
+      @(posedge clk_i);
+    end
+  endtask
 
 endinterface

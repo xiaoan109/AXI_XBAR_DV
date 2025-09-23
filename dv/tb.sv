@@ -22,8 +22,8 @@ module tb;
   clk_rst_if clk_rst_if(.clk(clk), .rst_n(rst_n));
   AXI_BUS #(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH, AXI_USER_WIDTH) master [NUM_MASTERS-1:0] ();
   AXI_BUS #(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH + $clog2(NUM_MASTERS), AXI_USER_WIDTH) slave [NUM_SLAVES-1:0] ();
-  axi_mst_if #(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH, AXI_USER_WIDTH) axi_mst_if [NUM_MASTERS-1:0] (clk);
-  axi_slv_if #(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH + $clog2(NUM_MASTERS), AXI_USER_WIDTH) axi_slv_if [NUM_SLAVES-1:0] (clk);
+  axi_mst_if #(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH, AXI_USER_WIDTH) axi_mst_if [NUM_MASTERS-1:0] (clk, rst_n);
+  axi_slv_if #(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH + $clog2(NUM_MASTERS), AXI_USER_WIDTH) axi_slv_if [NUM_SLAVES-1:0] (clk, rst_n);
   `include "axi/assign.svh"
   for (genvar i = 0; i < NUM_MASTERS; i++) begin : gen_conn_dv_masters
     `AXI_ASSIGN(master[i], axi_mst_if[i])

@@ -10,6 +10,9 @@ class axi_smoke_vseq extends axi_base_vseq;
 
   task body();
     // `uvm_error(`gfn, "FIXME")
+    axi_mst_random_seq mst_seq;
+    `uvm_create_obj(axi_mst_random_seq, mst_seq);
+    mst_seq.start(p_sequencer.axi_mst_sequencer_h);
   endtask : body
 
 endclass : axi_smoke_vseq
