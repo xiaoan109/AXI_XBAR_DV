@@ -75,4 +75,18 @@ region 1 will going to the default slave and return a DECERR)
 
 We can see the addr between 0x0-0x1fff is stuck because of the miss of slave driver and the addr between 0x2000-0x3fff is returned with a DECERR response.
 
-#### -> TODO: 6.6 Complete axi_slave_driver(reactive driver)
+#### 6.6 Complete axi_slave_driver/sequencer(reactive driver)
+
+A standard AXI slave driver(reactive driver) is completed.
+
+An AXI slave sequencer is completed.
+
+#### 6.7 Complete axi_slave_seq
+
+Forever generate responses. In the future we will add a memory model in slave.
+
+BUG: We don't set a constraint for req addr to avoid cross 4KiB problem.
+
+TODO: Solve the above question.
+
+#### ->TODO 6.8 Complete full UVCs(memory, monitor,scb...)
