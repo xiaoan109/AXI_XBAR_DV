@@ -98,6 +98,6 @@ verdi_merged:
 
 clean:
 	rm -rf csrc *.vdb *.vcd *.fsdb *.vpd \
-	simv simv.daidir ucli.key vc_hdrs.h *.log \
+	simv* ucli.key vc_hdrs.h *.log \
 	urgReport verdiLog vdCovLog \
 	*_test* merged verdi_config_file

@@ -21,6 +21,12 @@ class axi_base_test extends dv_base_test #(
     cfg.m_axi_mst_agent_cfg.b_ready_delay_max = 10;
     cfg.m_axi_mst_agent_cfg.r_ready_delay_min = 0;
     cfg.m_axi_mst_agent_cfg.r_ready_delay_max = 10;
+    cfg.m_axi_slv_agent_cfg.aw_ready_delay_min = 0;
+    cfg.m_axi_slv_agent_cfg.aw_ready_delay_max = 10;
+    cfg.m_axi_slv_agent_cfg.w_ready_delay_min = 0;
+    cfg.m_axi_slv_agent_cfg.w_ready_delay_max = 10;
+    cfg.m_axi_slv_agent_cfg.ar_ready_delay_min = 0;
+    cfg.m_axi_slv_agent_cfg.ar_ready_delay_max = 10;
     // create memory partitions
     cfg.m_memory_partitions = memory_partitions_cfg#(AXI_ADDR_WIDTH)::type_id::create("m_memory_partitions", this);
     if (!cfg.m_memory_partitions.randomize() with {

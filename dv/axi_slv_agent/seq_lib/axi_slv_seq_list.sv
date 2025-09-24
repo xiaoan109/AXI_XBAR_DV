@@ -3,3 +3,4 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `include "axi_slv_base_seq.sv"
+`include "axi_slv_response_seq.sv"

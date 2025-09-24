@@ -36,6 +36,8 @@ class axi_mst_driver extends dv_base_driver #(
       drive_AW_channel_signals();
       drive_W_channel_signals();
       drive_AR_channel_signals();
+      cfg.vif.b_ready <= 1'b0;
+      cfg.vif.r_ready <= 1'b0;
       aw_txn_queue.delete();
       w_txn_queue.delete();
       ar_txn_queue.delete();

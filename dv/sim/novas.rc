@@ -224,6 +224,8 @@ Selection-LineColor = ID_BLUE3
 Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
+[FileBrowser]
+nWaveOpenFsdbDirHistory = "\"/home/eda/workspace/AXI_XBAR_DV/dv/sim/test.fsdb\"" "\"/home/eda/workspace/AXI_XBAR_DV/dv/sim/novas.fsdb\""
 [Form]
 version = Verdi_T-2022.06-SP2-10
 [General]
@@ -392,8 +394,9 @@ verdiNewFontDlg = 1019,507,500,360
 qPrefDlg = 911,475,716,424
 verdiMonoFontDlg = 1086,471,366,432
 unknownSave = 1047,572,461,245
+openFileDlg = 977,453,602,483
 QwWarnMsgDlg = 969,512,600,250
-QwUserAskDlg = 1117,614,324,163
+QwUserAskDlg = 1116,515,324,163
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -481,13 +484,13 @@ thirdpartyIdx = -1
 NoAppendOption = FALSE
 ScsDebugAll = FALSE
 smartlog = FALSE
+vcs_svOption = +UVM_TESTNAME=axi_base_test +UVM_VERBOSITY=UVM_HIGH +NUM_TXN=1 +UVM_VERDI_TRACE=UVM_AWARE+HIER + -ucli +ntb_random_seed_automatic +UVM_TEST_SEQ=axi_smoke_vseq
 simType = vcssv
 bSVTBMode = TRUE
 SimMode = TRUE
 interactiveDebugging = TRUE
 KeepBreakPoints = FALSE
-vcs_svPath = /home/eda/workspace/AXI_XBAR_DV/dv/sim/simv
-vcs_svOption = +UVM_TESTNAME=axi_base_test +UVM_VERBOSITY=UVM_HIGH +NUM_TXN=1 +UVM_VERDI_TRACE=UVM_AWARE+HIER + -ucli +ntb_random_seed_automatic +UVM_TEST_SEQ=axi_smoke_vseq
+vcs_svPath = axi_base_test/simv
 [SimulationPlus2]
 eventDumpUnfinish = FALSE
 [Source]
@@ -690,33 +693,33 @@ viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Ones
 [VIA.oneSearch.preference]
 DefaultDisplayTimeUnit = "1.000000ns"
 DefaultLogTimeUnit = "1.000000ns"
-isOneSearchVisible = FALSE
+isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC]
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = "Code"
-width = 60
-visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = "Type"
 width = 60
 visualIndex = 4
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = "Message"
 width = 2000
 visualIndex = 5
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = "Time"
 width = 60
 visualIndex = 0
 isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = "Code"
+width = 60
+visualIndex = 3
+isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = "Severity"
@@ -812,7 +815,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 0 0 800 479 100 30 100 30
-viewPort = 0 25 2558 1158 332 63
+viewPort = 0 25 2558 718 332 63
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -978,8 +981,8 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/home/eda/workspace/AXI_XBAR_DV/dv/sim/test.fsdb\""
-RecentFile2 = "\"/home/eda/workspace/AXI_XBAR_DV/dv/sim/axi_base_test/sim.fsdb\""
+RecentFile1 = "\"/home/eda/workspace/AXI_XBAR_DV/dv/sim/axi_base_test/sim.fsdb\""
+RecentFile2 = "\"/home/eda/workspace/AXI_XBAR_DV/dv/sim/test.fsdb\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER14 -c ID_CYAN5
 value_window_font = -f COURIER14 -c ID_CYAN5
@@ -1733,7 +1736,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 2558 1158 332 63
+viewPort = 0 25 2558 718 332 63
 [wave.1]
 viewPort = 0 25 2558 720 332 65
 [wave.2]

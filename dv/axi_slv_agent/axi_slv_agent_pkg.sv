@@ -21,8 +21,8 @@ package axi_slv_agent_pkg;
   typedef class axi_slv_agent_cfg;
 
   // reuse dv_base_sequencer as is with the right parameter set
-  typedef dv_base_sequencer #(.ITEM_T(axi_slv_item),
-                              .CFG_T (axi_slv_agent_cfg)) axi_slv_sequencer;
+  // typedef dv_base_sequencer #(.ITEM_T(axi_slv_item),
+  //                             .CFG_T (axi_slv_agent_cfg)) axi_slv_sequencer;
 
   // virtual intf
   typedef virtual axi_slv_if#(AXI_ADDR_WIDTH, AXI_DATA_WIDTH, AXI_ID_WIDTH + $clog2(NUM_MASTERS), AXI_USER_WIDTH) axi_slv_vif;
@@ -35,6 +35,7 @@ package axi_slv_agent_pkg;
   `include "axi_slv_agent_cov.sv"
   `include "axi_slv_driver.sv"
   `include "axi_slv_monitor.sv"
+  `include "axi_slv_sequencer.sv"
   `include "axi_slv_agent.sv"
   `include "axi_slv_seq_list.sv"
 

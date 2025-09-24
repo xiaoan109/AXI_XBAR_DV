@@ -130,7 +130,7 @@ interface axi_mst_if #(
     axi_pkg::beat_addr(aw_addr, aw_size, aw_len, aw_burst, 0) >> 12 ==    // lowest beat address
     axi_pkg::beat_addr(aw_addr, aw_size, aw_len, aw_burst, aw_len) >> 12  // highest beat address
   )) else $error("AW burst crossing 4 KiB page boundary detected, which is illegal!");
-  assert property (@(posedge clk_i) ar_valid |-> (aw_burst != axi_pkg::BURST_INCR) || (
+  assert property (@(posedge clk_i) ar_valid |-> (ar_burst != axi_pkg::BURST_INCR) || (
     axi_pkg::beat_addr(ar_addr, ar_size, ar_len, ar_burst, 0) >> 12 ==    // lowest beat address
     axi_pkg::beat_addr(ar_addr, ar_size, ar_len, ar_burst, ar_len) >> 12  // highest beat address
   )) else $error("AR burst crossing 4 KiB page boundary detected, which is illegal!");

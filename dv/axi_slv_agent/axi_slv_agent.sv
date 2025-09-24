@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 class axi_slv_agent extends dv_base_agent #(
-  .CFG_T          (axi_slv_agent_cfg),
-  .DRIVER_T       (axi_slv_driver),
-  .SEQUENCER_T    (axi_slv_sequencer),
-  .MONITOR_T      (axi_slv_monitor),
-  .COV_T          (axi_slv_agent_cov)
+    .CFG_T      (axi_slv_agent_cfg),
+    .DRIVER_T   (axi_slv_driver),
+    .SEQUENCER_T(axi_slv_sequencer),
+    .MONITOR_T  (axi_slv_monitor),
+    .COV_T      (axi_slv_agent_cov)
 );
 
   `uvm_component_utils(axi_slv_agent)
@@ -20,6 +20,11 @@ class axi_slv_agent extends dv_base_agent #(
     if (!uvm_config_db#(axi_slv_vif)::get(this, "", "vif", cfg.vif)) begin
       `uvm_fatal(`gfn, "failed to get axi_slv_if handle from uvm_config_db")
     end
+  endfunction
+
+  virtual function void connect_phase(uvm_phase phase);
+    super.connect_phase(phase);
+    sequencer.get_port.connect(driver.get_export);
   endfunction
 
 endclass

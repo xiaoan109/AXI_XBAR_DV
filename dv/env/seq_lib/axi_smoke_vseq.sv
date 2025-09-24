@@ -11,7 +11,12 @@ class axi_smoke_vseq extends axi_base_vseq;
   task body();
     // `uvm_error(`gfn, "FIXME")
     axi_mst_random_seq mst_seq;
+    axi_slv_response_seq slv_seq;
     `uvm_create_obj(axi_mst_random_seq, mst_seq);
+    `uvm_create_obj(axi_slv_response_seq, slv_seq);
+    fork
+      slv_seq.start(p_sequencer.axi_slv_sequencer_h);
+    join_none
     mst_seq.start(p_sequencer.axi_mst_sequencer_h);
   endtask : body
 

@@ -154,7 +154,7 @@ class memory_partitions_cfg #(int addr_width=32) extends uvm_component;
            end
          end
        end
-       `uvm_info("MEMORY PARTITION ADDR", $sformatf( "low %0x(x) high %0x(x) Addr %0x(x)", m_low_addr[region], m_high_addr[region], addr), UVM_LOW);
+       `uvm_info("MEMORY PARTITION ADDR", $sformatf( "low %0x(x) high %0x(x) Addr %0x(x)", m_low_addr[region], m_high_addr[region], addr), UVM_HIGH);
 
        get_addr_in_mem_region = addr;
    endfunction
